@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request a reservation at Pepper. Find our location, hours of operation, and submit special requests.">
+  <title>Contact &amp; Reservations | Pepper Fine Dining</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-head">
+    <nav class="nav-inner" aria-label="Primary">
+      <a href="index.html" class="brand-mark">Pep<span>per</span></a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner banner--page banner--contact" aria-label="Contact and reservations">
+      <div class="banner-inner">
+        <p class="banner-sub rise">Join Us</p>
+        <h1 class="banner-title rise rise-2">Reserve</h1>
+      </div>
+    </section>
+
+    <section class="wrap" aria-labelledby="form-h">
+      <div class="split">
+        <!-- RESERVATION FORM -->
+        <article>
+          <p class="eyebrow">Reservation Request</p>
+          <h2 id="form-h">Request a table</h2>
+          <p>Send your details and we'll confirm by email within one business day.</p>
+
+          <form id="reservation-form" class="form-grid" novalidate>
+            <div class="field">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" autocomplete="given-name">
+              <span class="error-msg" data-for="firstName"></span>
+            </div>
+            <div class="field">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" autocomplete="family-name">
+              <span class="error-msg" data-for="lastName"></span>
+            </div>
+            <div class="field field--full">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email">
+              <span class="error-msg" data-for="email"></span>
+            </div>
+            <div class="field">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" autocomplete="address-level2">
+              <span class="error-msg" data-for="city"></span>
+            </div>
+            <div class="field">
+              <label for="zip">Zip Code</label>
+              <input type="text" id="zip" name="zip" autocomplete="postal-code" inputmode="numeric">
+              <span class="error-msg" data-for="zip"></span>
+            </div>
+            <div class="field">
+              <label for="date">Reservation Date</label>
+              <input type="date" id="date" name="date">
+              <span class="error-msg" data-for="date"></span>
+            </div>
+            <div class="field">
+              <label for="guests">Number of Guests</label>
+              <select id="guests" name="guests">
+                <option value="">Select…</option>
+                <option>1</option><option>2</option><option>3</option>
+                <option>4</option><option>5</option><option>6</option>
+                <option>7+ (private dining)</option>
+              </select>
+              <span class="error-msg" data-for="guests"></span>
+            </div>
+            <div class="field field--full">
+              <label for="requests">Special Requests</label>
+              <textarea id="requests" name="requests" placeholder="Dietary needs, occasion, seating preferences…"></textarea>
+            </div>
+            <div class="field--full">
+              <button type="submit" class="btn">Submit Request</button>
+              <p class="form-note">We'll never share your information.</p>
+            </div>
+          </form>
+          <p class="form-success" id="form-success" role="status">
+            Thank you. Your reservation request has been received. We'll be in touch shortly.
+          </p>
+        </article>
+
+        <!-- LOCATION + HOURS -->
+        <aside>
+          <p class="eyebrow">Find Us</p>
+          <h2>Visit Pepper</h2>
+          <div class="info-grid" style="grid-template-columns:1fr;">
+            <section>
+              <h3>Location</h3>
+              <p>412 Harbor Lane<br>Boston, MA 02110<br>Two blocks from the waterfront,
+                between Wharf and Dock Street.</p>
+            </section>
+            <section>
+              <h3>Hours of Operation</h3>
+              <p>Tuesday – Thursday · 5 PM – 9 PM<br>
+                 Friday – Saturday · 5 PM – 10 PM<br>
+                 Sunday &amp; Monday · Closed</p>
+            </section>
+            <section>
+              <h3>Contact</h3>
+              <p>(617) 555-0142<br>
+                 <a href="mailto:reserve@pepper-dining.com">reserve@pepper-dining.com</a></p>
+            </section>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-inner">
+      <div>
+        <p class="foot-brand">Pep<span>per</span></p>
+        <p style="color:rgba(244,239,231,.7); margin-top:.75rem; font-size:.9rem;">
+          A Contemporary Fine Dining Experience</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu &amp; Pricing</a></li>
+          <li><a href="services.html">Guest Services</a></li>
+          <li><a href="contact.html">Contact &amp; Reservations</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <ul>
+          <li>412 Harbor Lane</li>
+          <li>Boston, MA 02110</li>
+          <li>(617) 555-0142</li>
+          <li>Tue–Sat · 5–10 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 Pepper. All rights reserved.</span>
+      <span>Designed by Shaun Cronin</span>
+    </div>
+  </footer>
+
+  <script src="js/validation.js"></script>
+</body>
+</html>

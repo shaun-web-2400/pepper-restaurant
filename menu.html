@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pepper's seasonal tasting menu, à la carte selections, and wine pairings, with current pricing.">
+  <title>Menu &amp; Pricing | Pepper Fine Dining</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-head">
+    <nav class="nav-inner" aria-label="Primary">
+      <a href="index.html" class="brand-mark">Pep<span>per</span></a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html" aria-current="page">Menu</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner banner--page banner--menu" aria-label="Pepper menu">
+      <div class="banner-inner">
+        <p class="banner-sub rise">Seasonal Tasting</p>
+        <h1 class="banner-title rise rise-2">Menu</h1>
+      </div>
+    </section>
+
+    <!-- TASTING MENU DESCRIPTION -->
+    <section class="wrap wrap--tight" aria-labelledby="tasting-h">
+      <p class="eyebrow">This Season</p>
+      <h2 id="tasting-h">A seven-course progression.</h2>
+      <p>Our menu changes with the harvest and the catch. The current progression
+        moves from raw and bright through fire and richness, finishing on the garden.
+        Dietary needs are easily accommodated with a day's notice. Let us know when
+        you book.</p>
+    </section>
+
+    <!-- COURSE SEQUENCE (numbered: a true ordered sequence) -->
+    <section class="wrap" aria-labelledby="courses-h">
+      <h2 id="courses-h" class="eyebrow" style="font-size:.72rem;">The Courses</h2>
+      <ol class="courses">
+        <li><span class="course-name">Oyster &amp; Apple</span>
+            <span class="course-desc">Day-boat oyster, green apple, frozen horseradish</span>
+            <span class="course-price"></span></li>
+        <li><span class="course-name">Garden Crudité</span>
+            <span class="course-desc">Raw and pickled vegetables, herb emulsion</span>
+            <span class="course-price"></span></li>
+        <li><span class="course-name">Hand-Cut Pasta</span>
+            <span class="course-desc">Brown butter, aged parmesan, black pepper</span>
+            <span class="course-price"></span></li>
+        <li><span class="course-name">Line-Caught Fish</span>
+            <span class="course-desc">Brassica leaves, roasted squash, shellfish jus</span>
+            <span class="course-price"></span></li>
+        <li><span class="course-name">Aged Duck</span>
+            <span class="course-desc">Pommes purée, confit potato, peppercorn sauce</span>
+            <span class="course-price"></span></li>
+        <li><span class="course-name">Cheese &amp; Honey</span>
+            <span class="course-desc">Local cheese, comb honey, walnut</span>
+            <span class="course-price"></span></li>
+        <li><span class="course-name">Raspberry &amp; Cream</span>
+            <span class="course-desc">Set sheep's-milk cream, toasted crumble, garden herbs</span>
+            <span class="course-price"></span></li>
+      </ol>
+    </section>
+
+    <!-- FOOD PHOTOGRAPHY -->
+    <section class="wrap" aria-label="Food photography">
+      <div class="split">
+        <figure class="split-media">
+          <img src="images/chef-saucing.jpg" alt="Line-caught fish finished with a spooned jus and brussels leaves">
+          <figcaption>Fourth course: line-caught fish</figcaption>
+        </figure>
+        <figure class="split-media">
+          <img src="images/dessert-raspberry.jpg" alt="Raspberry and sheep's-milk cream dessert with toasted crumble">
+          <figcaption>Final course: raspberry &amp; cream</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- PRICING TABLE (border-free, responsive) -->
+    <section class="wrap wrap--tight" aria-labelledby="pricing-h">
+      <p class="eyebrow">Pricing</p>
+      <h2 id="pricing-h">What's on offer</h2>
+      <table class="price-table">
+        <caption>Per guest · subject to seasonal change</caption>
+        <thead>
+          <tr>
+            <th scope="col">Offering</th>
+            <th scope="col">Description</th>
+            <th scope="col" style="text-align:right;">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item">Seasonal Tasting Menu</td>
+            <td class="desc">Seven courses, chef's progression</td>
+            <td class="price">$145</td>
+          </tr>
+          <tr>
+            <td class="item">Wine Pairing</td>
+            <td class="desc">Sommelier's flight, one glass per course</td>
+            <td class="price">$85</td>
+          </tr>
+          <tr>
+            <td class="item">Reserve Pairing</td>
+            <td class="desc">Rare and library selections</td>
+            <td class="price">$165</td>
+          </tr>
+          <tr>
+            <td class="item">À La Carte: First Courses</td>
+            <td class="desc">Oyster, crudité, or pasta, each</td>
+            <td class="price">$24</td>
+          </tr>
+          <tr>
+            <td class="item">À La Carte: Mains</td>
+            <td class="desc">Fish or aged duck, each</td>
+            <td class="price">$48</td>
+          </tr>
+          <tr>
+            <td class="item">Dessert</td>
+            <td class="desc">Raspberry &amp; cream, or cheese &amp; honey</td>
+            <td class="price">$18</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="form-note">A 20% service charge is added to parties of six or more.</p>
+      <p style="margin-top:1.75rem;"><a href="contact.html" class="btn">Reserve a Table</a></p>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-inner">
+      <div>
+        <p class="foot-brand">Pep<span>per</span></p>
+        <p style="color:rgba(244,239,231,.7); margin-top:.75rem; font-size:.9rem;">
+          A Contemporary Fine Dining Experience</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu &amp; Pricing</a></li>
+          <li><a href="services.html">Guest Services</a></li>
+          <li><a href="contact.html">Contact &amp; Reservations</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <ul>
+          <li>412 Harbor Lane</li>
+          <li>Boston, MA 02110</li>
+          <li>(617) 555-0142</li>
+          <li>Tue–Sat · 5–10 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 Pepper. All rights reserved.</span>
+      <span>Designed by Shaun Cronin</span>
+    </div>
+  </footer>
+
+</body>
+</html>
