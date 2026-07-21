@@ -365,25 +365,56 @@ figcaption {
 .faq details[open] summary::after { content: "–"; }
 .faq p { margin-top: .85rem; }
 
-/* Section labels for services list */
-.service-list { list-style: none; }
-.service-list li {
-  padding: 1.4rem 0;
+/* ---- Services: ordered list of categories ---- */
+.svc-categories { list-style: none; counter-reset: cat; }
+.svc-cat {
+  counter-increment: cat;
+  position: relative;
+  padding: 2rem 0;
   border-bottom: 1px solid var(--line);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: .5rem 2rem;
-  align-items: baseline;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 3rem;
+  align-items: start;
 }
-.service-list .svc-name { font-family: var(--display); font-size: 1.35rem; color: var(--ink); }
-.service-list .svc-when {
-  font-size: .76rem;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--sage);
+.svc-cat::before { /* leading-zero category number */
+  content: counter(cat, decimal-leading-zero);
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  font-family: var(--display);
+  font-size: .9rem;
+  color: var(--gold);
 }
-.service-list .svc-desc { flex-basis: 100%; color: var(--ink-soft); font-size: .95rem; }
+.svc-cat-head { padding-left: 2.5rem; }
+.svc-cat-head h3 { font-size: 1.5rem; }
+.svc-cat-head p { font-size: .95rem; }
+
+/* Nested hours — image-styled unordered list (peppercorn marker) */
+.svc-hours {
+  list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Ccircle cx='6' cy='7' r='3.2' fill='%237a2031'/%3E%3C/svg%3E");
+  padding-left: 1.2rem;
+}
+.svc-hours li {
+  margin-bottom: .55rem;
+  padding-left: .3rem;
+  color: var(--ink-soft);
+  font-size: .95rem;
+}
+
+/* Nearby / local links — image-styled unordered list (gold chevron) */
+.link-list {
+  list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M3 2l4.5 4L3 10' fill='none' stroke='%23b08a4f' stroke-width='1.7'/%3E%3C/svg%3E");
+  padding-left: 1.2rem;
+  margin-top: 1.5rem;
+}
+.link-list li {
+  margin-bottom: .7rem;
+  padding-left: .3rem;
+  color: var(--ink-soft);
+}
+.link-list a { font-weight: 600; }
+.link-list a:hover { text-decoration: underline; }
 
 /* ---------- 8. FORMS ---------- */
 .form-grid {
@@ -421,6 +452,18 @@ figcaption {
   background: #fff;
 }
 .field textarea { resize: vertical; min-height: 120px; }
+.field .optional { color: var(--ink-soft); font-weight: 400; letter-spacing: 0; text-transform: none; }
+
+/* Native HTML5 validation feedback — only after the guest interacts */
+.field input:user-invalid,
+.field select:user-invalid {
+  border-color: var(--claret);
+  background: #fff;
+}
+.field input:user-valid,
+.field select:user-valid {
+  border-bottom-color: var(--sage);
+}
 .error-msg { color: var(--claret); font-size: .8rem; margin-top: .35rem; min-height: 1em; }
 .form-note { font-size: .85rem; color: var(--ink-soft); margin-top: 1rem; }
 .form-success {
@@ -500,6 +543,8 @@ figcaption {
   .split { grid-template-columns: 1fr; }
   .split--reverse .split-media { order: 0; }
   .pullquote { max-width: none; }
+  .svc-cat { grid-template-columns: 1fr; gap: 1rem; }
+  .svc-hours { padding-left: 2.5rem; }
 }
 
 @media (max-width: 640px) {
